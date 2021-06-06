@@ -10,7 +10,7 @@
     "postinstall": "npm run build",
     "dev-client": "cd fullfront && npm run dev",
     "dev-server": "nodemon --exec ./node_modules/.bin/ts-node -- ./server/index.ts",
-    "test": "cd fullfront && npm test",
+    "test": "cd fullfront && npm test"
   },
   "cacheDirectories": [
     "node_modules",
