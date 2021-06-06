@@ -7,14 +7,14 @@
   },
   "scripts": {
     "start": "node ./build/index.js",
-    "dev-client": "cd fillfront && npm run dev",
+    "dev-client": "cd fullfront && npm run dev",
     "dev-server": "nodemon --exec ./node_modules/.bin/ts-node -- ./server/index.ts",
-    "test": "cd fillfront && npm test",
-    "heroku-postbuild": "tsc & cd fillfront/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "test": "cd fullfront && npm test",
+    "heroku-postbuild": "tsc & cd fullfront/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
     "node_modules",
-    "fillfront/node_modules"
+    "fullfront/node_modules"
   ],
   "dependencies": {
     "@types/express": "^4.16.0",
