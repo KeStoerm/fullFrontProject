@@ -7,10 +7,10 @@
   },
   "scripts": {
     "start": "node ./build/index.js",
+    "postinstall": "npm run build",
     "dev-client": "cd fullfront && npm run dev",
     "dev-server": "nodemon --exec ./node_modules/.bin/ts-node -- ./server/index.ts",
     "test": "cd fullfront && npm test",
-    "heroku-postbuild": "tsc & cd fullfront/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
     "node_modules",
