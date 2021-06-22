@@ -1,6 +1,14 @@
-import { mockAnswer } from "@/mockData/mocks"
-import { Persons } from "@/types/types"
+import { Person } from "@/types/types"
+import axios, { AxiosResponse } from "axios";
 
-export const getShamePointsForMonth = (): Promise<Persons> => {
-    return new Promise(resolve => setTimeout(resolve, 5000, mockAnswer));
+export const getShamePointsForMonth = async (): Promise<Array<Person>> => {
+    const date = new Date();
+        const url = process.env.VUE_APP_FULL_FRONT_BACKEND_URL + '/' + date.getFullYear() + '/' + (date.getMonth() + 1) ;
+        const { data } = await axios.get(url, {
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Accept': 'application/json'
+            }
+        });
+        return data;
 }

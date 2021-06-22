@@ -1,6 +1,6 @@
 <template>
   <div>
-    <headline /> 
+    <headline />
     <div class="result-content">
       <transition-group name="results" v-if="!loading">
         <result-card v-for="rank in ranking" :rank="rank" :totalShamePoints="totalShamePoints" :key="rank.name" />
@@ -41,7 +41,7 @@ export default class Results extends Vue {
   }
 
   private async loadResult(): Promise<void> {
-    this.loading = true; 
+    this.loading = true;
 
     const results = await getShamePointsForMonth();
 
@@ -52,7 +52,7 @@ export default class Results extends Vue {
   }
 
   private click(): void {
-      this.$emit('click');    
+      this.$emit('click');
   }
 
 }
