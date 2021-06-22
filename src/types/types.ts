@@ -1,5 +1,4 @@
 export interface ShamePoint {
-    personName: string,
     date: string,
 }
 
