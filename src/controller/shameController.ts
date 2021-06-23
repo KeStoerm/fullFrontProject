@@ -7,7 +7,7 @@ const getOrigin = (): string => {
 
 export const getShamePointsForMonth = async (): Promise<Array<Person>> => {
     const date = new Date();
-        const url = getOrigin() + ':1336' + '/' + date.getFullYear() + '/' + (date.getMonth() + 1) ;
+        const url = 'http://' + getOrigin() + ':1336' + '/' + date.getFullYear() + '/' + (date.getMonth() + 1) ;
         const { data } = await axios.get(url, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
