@@ -3,7 +3,6 @@ export interface ShamePoint {
 }
 
 export interface Person {
-    id: string,
     name: string,
     shamePoints: Array<ShamePoint>,
 }
